@@ -1,0 +1,12 @@
+2024-09-25 15:59:21.5795|INFO|LoggerService.LoggerManager|This is an Info message
+2024-09-25 15:59:21.5932|INFO|LoggerService.LoggerManager|This is an Warning message
+2024-09-25 15:59:21.5932|DEBUG|LoggerService.LoggerManager|This is a Debug message
+2024-09-25 15:59:21.5932|ERROR|LoggerService.LoggerManager|This is an Error message
+2024-09-25 15:59:53.2347|INFO|LoggerService.LoggerManager|This is an Info message
+2024-09-25 15:59:53.2347|INFO|LoggerService.LoggerManager|This is an Warning message
+2024-09-25 15:59:53.2347|DEBUG|LoggerService.LoggerManager|This is a Debug message
+2024-09-25 15:59:53.2347|ERROR|LoggerService.LoggerManager|This is an Error message
+2024-09-25 16:04:13.1294|ERROR|LoggerService.LoggerManager|Error is WeatherForecastController.Get(): System.Exception: Did not find the value you are looking for.
+   at API.Controllers.WeatherForecastController.Get() in D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\Controllers\WeatherForecastController.cs:line 27
+2024-09-25 16:07:19.2242|ERROR|LoggerService.LoggerManager|Error is WeatherForecastController.Get(): System.Exception: Did not find the value you are looking for.
+   at API.Controllers.WeatherForecastController.Get() in D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\Controllers\WeatherForecastController.cs:line 27
