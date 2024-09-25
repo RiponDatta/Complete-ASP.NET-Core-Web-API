@@ -1,4 +1,6 @@
-﻿namespace API.Extensions
+﻿using LoggerService;
+
+namespace API.Extensions
 {
     public static class ServiceExtensions
     {
@@ -12,5 +14,8 @@
                     .AllowAnyHeader());
             });
         }
+
+        public static void ConfigureLoggerService(this IServiceCollection services) =>
+                services.AddSingleton<ILoggerManager, LoggerManager>();
     }
 }

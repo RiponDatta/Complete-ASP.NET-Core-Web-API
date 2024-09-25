@@ -25,3 +25,10 @@ D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\ref\API.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\appsettings.Production.json
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\NLog.config
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\NLog.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\NLog.Extensions.Logging.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\LoggerService.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\LoggerService.pdb
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\API.csproj.Up2Date

@@ -1,8 +1,13 @@
 using API.Extensions;
+using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+LogManager.Setup(option =>
+    option.LoadConfigurationFromFile(string.Concat(Directory.GetCurrentDirectory(), "/NLog.config")));
+
 builder.Services.ConfigureCors();
+builder.Services.ConfigureLoggerService();
 
 builder.Services.AddControllers();
 

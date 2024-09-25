@@ -1,3 +1,4 @@
+using LoggerService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -11,9 +12,9 @@ namespace API.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILoggerManager _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILoggerManager logger)
         {
             _logger = logger;
         }
@@ -21,6 +22,11 @@ namespace API.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogInfo("This is an Info message");
+            _logger.LogInfo("This is an Warning message");
+            _logger.LogDebug("This is a Debug message");
+            _logger.LogError("This is an Error message");
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

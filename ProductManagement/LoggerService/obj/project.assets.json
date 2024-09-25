@@ -162,19 +162,6 @@
             "related": ".xml"
           }
         }
-      },
-      "LoggerService/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "NLog.Extensions.Logging": "5.3.14"
-        },
-        "compile": {
-          "bin/placeholder/LoggerService.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LoggerService.dll": {}
-        }
       }
     }
   },
@@ -505,16 +492,11 @@
         "nlog.extensions.logging.5.3.14.nupkg.sha512",
         "nlog.extensions.logging.nuspec"
       ]
-    },
-    "LoggerService/1.0.0": {
-      "type": "project",
-      "path": "../LoggerService/LoggerService.csproj",
-      "msbuildProject": "../LoggerService/LoggerService.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "LoggerService >= 1.0.0"
+      "NLog.Extensions.Logging >= 5.3.14"
     ]
   },
   "packageFolders": {
@@ -524,11 +506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\API\\API.csproj",
-      "projectName": "API",
-      "projectPath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\API\\API.csproj",
+      "projectUniqueName": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\LoggerService\\LoggerService.csproj",
+      "projectName": "LoggerService",
+      "projectPath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\LoggerService\\LoggerService.csproj",
       "packagesPath": "C:\\Users\\srpnc\\.nuget\\packages\\",
-      "outputPath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\API\\obj\\",
+      "outputPath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\LoggerService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -548,11 +530,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\LoggerService\\LoggerService.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -569,6 +547,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "NLog.Extensions.Logging": {
+            "target": "Package",
+            "version": "[5.3.14, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -581,9 +565,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
