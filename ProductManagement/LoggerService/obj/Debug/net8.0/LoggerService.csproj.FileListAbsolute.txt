@@ -1,0 +1,13 @@
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\bin\Debug\net8.0\LoggerService.deps.json
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\bin\Debug\net8.0\LoggerService.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\bin\Debug\net8.0\LoggerService.pdb
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.csproj.AssemblyReference.cache
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.AssemblyInfoInputs.cache
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.AssemblyInfo.cs
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.sourcelink.json
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\refint\LoggerService.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\LoggerService.pdb
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\LoggerService\obj\Debug\net8.0\ref\LoggerService.dll
