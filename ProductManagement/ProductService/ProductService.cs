@@ -2,7 +2,7 @@
 using Repository;
 using Repository.Models;
 
-namespace ProductService
+namespace Services
 {
     public class ProductService : IProductService
     {

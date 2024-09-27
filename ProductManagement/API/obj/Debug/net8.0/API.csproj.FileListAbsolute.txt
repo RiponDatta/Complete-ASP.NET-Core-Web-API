@@ -138,3 +138,5 @@ D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\API.pdb
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\ref\API.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\ProductService.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\ProductService.pdb

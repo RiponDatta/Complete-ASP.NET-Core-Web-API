@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.8",
+          "ProductService": "1.0.0",
           "Repository": "1.0.0"
         },
         "runtime": {
@@ -892,6 +893,18 @@
           }
         }
       },
+      "ProductService/1.0.0": {
+        "dependencies": {
+          "LoggerService": "1.0.0",
+          "Repository": "1.0.0"
+        },
+        "runtime": {
+          "ProductService.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Repository/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.8"
@@ -1458,6 +1471,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "LoggerService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

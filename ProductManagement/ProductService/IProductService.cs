@@ -1,6 +1,6 @@
 ﻿using Repository.Models;
 
-namespace ProductService
+namespace Services
 {
     public interface IProductService
     {
