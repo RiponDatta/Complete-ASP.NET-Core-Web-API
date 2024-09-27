@@ -8,6 +8,7 @@ LogManager.Setup(option =>
 
 builder.Services.ConfigureCors();
 builder.Services.ConfigureLoggerService();
+builder.Services.ConfigureRepositoryManager();
 
 builder.Services.AddControllers();
 
