@@ -4,3 +4,7 @@
 
 /ProductManagement/.vs/ProductManagement
 /.vs
+/ProductManagement/Repository/bin/*
+/ProductManagement/Repository/obj/*
+/ProductManagement/LoggerService/obj/*
+/ProductManagement/API/obj/*
