@@ -142,3 +142,4 @@ D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\ProductService.pdb
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Shared.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Shared.pdb
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\AutoMapper.dll

@@ -1,4 +1,5 @@
-﻿using LoggerService;
+﻿using AutoMapper;
+using LoggerService;
 using Repository;
 using Repository.Models;
 using Shared.Products;
@@ -9,11 +10,13 @@ namespace Services
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly ILoggerManager _logger;
+        private readonly IMapper _mapper;
 
-        public ProductService(IRepositoryManager repositoryManager, ILoggerManager loggerManager)
+        public ProductService(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper)
         {
             _repositoryManager = repositoryManager;
             _logger = loggerManager;
+            _mapper = mapper;
         }
 
         public Product AddProduct(Product product)
@@ -88,7 +91,7 @@ namespace Services
                 if (products == null)
                     return null;
 
-                var productsDto = products.Select(x => new ProductDto().ConvertToDto(x));
+                var productsDto = _mapper.Map<IEnumerable<ProductDto>>(products);
 
                 return productsDto;
             }

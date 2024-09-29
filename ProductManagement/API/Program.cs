@@ -12,6 +12,8 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServices();
 builder.Services.ConfigureDbContext(builder.Configuration);
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
