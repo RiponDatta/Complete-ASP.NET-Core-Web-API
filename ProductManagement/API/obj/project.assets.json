@@ -1552,7 +1552,8 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "LoggerService": "1.0.0",
-          "Repository": "1.0.0"
+          "Repository": "1.0.0",
+          "Shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ProductService.dll": {}
@@ -1572,6 +1573,19 @@
         },
         "runtime": {
           "bin/placeholder/Repository.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
         }
       }
     }
@@ -4233,6 +4247,11 @@
       "type": "project",
       "path": "../Repository/Repository.csproj",
       "msbuildProject": "../Repository/Repository.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {

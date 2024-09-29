@@ -9,7 +9,8 @@
       "ProductService/1.0.0": {
         "dependencies": {
           "LoggerService": "1.0.0",
-          "Repository": "1.0.0"
+          "Repository": "1.0.0",
+          "Shared": "1.0.0"
         },
         "runtime": {
           "ProductService.dll": {}
@@ -180,6 +181,17 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Shared/1.0.0": {
+        "dependencies": {
+          "Repository": "1.0.0"
+        },
+        "runtime": {
+          "Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -293,6 +305,11 @@
       "sha512": ""
     },
     "Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

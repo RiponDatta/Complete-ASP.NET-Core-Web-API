@@ -1,10 +1,11 @@
 ﻿using Repository.Models;
+using Shared.Products;
 
 namespace Services
 {
     public interface IProductService
     {
-        IEnumerable<Product> GetAllProducts();
+        IEnumerable<ProductDto> GetAllProducts();
 
         Product GetProductById(Guid productId);
 

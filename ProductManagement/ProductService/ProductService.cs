@@ -1,6 +1,7 @@
 ﻿using LoggerService;
 using Repository;
 using Repository.Models;
+using Shared.Products;
 
 namespace Services
 {
@@ -78,13 +79,18 @@ namespace Services
             }
         }
 
-        public IEnumerable<Product> GetAllProducts()
+        public IEnumerable<ProductDto> GetAllProducts()
         {
             try
             {
                 var products = _repositoryManager.Product.GetAllProducts();
 
-                return products;
+                if (products == null)
+                    return null;
+
+                var productsDto = products.Select(x => new ProductDto().ConvertToDto(x));
+
+                return productsDto;
             }
             catch (Exception ex)
             {

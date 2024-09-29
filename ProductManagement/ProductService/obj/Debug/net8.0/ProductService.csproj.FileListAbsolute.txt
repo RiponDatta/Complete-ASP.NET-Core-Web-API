@@ -16,3 +16,5 @@ D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\ProductService\obj\De
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\ProductService\obj\Debug\net8.0\refint\ProductService.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\ProductService\obj\Debug\net8.0\ProductService.pdb
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\ProductService\obj\Debug\net8.0\ref\ProductService.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\ProductService\bin\Debug\net8.0\Shared.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\ProductService\bin\Debug\net8.0\Shared.pdb
