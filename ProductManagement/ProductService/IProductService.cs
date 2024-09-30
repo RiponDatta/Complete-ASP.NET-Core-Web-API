@@ -11,7 +11,7 @@ namespace Services
 
         Product AddProduct(Product product);
 
-        Product UpdateProduct(Product product);
+        ProductDto UpdateProduct(ProductDto product);
 
         void DeleteProduct(Guid productId);
     }

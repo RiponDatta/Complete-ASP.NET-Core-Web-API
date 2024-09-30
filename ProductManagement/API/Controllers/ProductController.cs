@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Services;
+using Shared.Products;
 
 namespace API.Controllers
 {
@@ -11,7 +12,7 @@ namespace API.Controllers
 
         public ProductController(IProductService service) => _serivce = service;
 
-        [HttpGet("getall")]
+        [HttpGet]
         public IActionResult GetProducts()
         {
             try
@@ -26,12 +27,20 @@ namespace API.Controllers
             }
         }
 
-        [HttpGet("get/{productGuid:Guid}")]
+        [HttpGet("{productGuid:Guid}")]
         public IActionResult GetProductById(Guid productGuid)
         {
             var product = _serivce.GetProductById(productGuid);
 
             return Ok(product);
+        }
+
+        [HttpPut]
+        public IActionResult UpdateProduct(ProductDto product)
+        {
+            var newProduct = _serivce.UpdateProduct(product);
+
+            return Ok(newProduct);
         }
     }
 }

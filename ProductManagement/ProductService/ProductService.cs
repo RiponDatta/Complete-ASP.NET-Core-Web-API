@@ -35,26 +35,27 @@ namespace Services
                 throw;
             }
         }
-        public Product UpdateProduct(Product product)
+        public ProductDto UpdateProduct(ProductDto product)
         {
             try
             {
                 var existingProduct = _repositoryManager.Product.GetProductById(product.ProductGuid);
 
-                if (existingProduct == null)
+                if (existingProduct is null)
                     throw new Exception($"Product Guid: {product.ProductGuid} is not existed.");
 
                 existingProduct.Title = product.Title;
                 existingProduct.Description = product.Description;
                 existingProduct.Price = product.Price;
-                existingProduct.ActualCost = product.ActualCost;
                 existingProduct.Quantity = product.Quantity;
                 existingProduct.ProductTypeId = product.ProductTypeId;
 
                 _repositoryManager.Product.UpdateProduct(existingProduct);
                 _repositoryManager.Save();
 
-                return existingProduct;
+                product = GetProductById(product.ProductGuid);
+
+                return product;
             }
             catch (Exception ex)
             {
