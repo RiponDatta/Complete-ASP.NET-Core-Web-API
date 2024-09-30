@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "API.Controllers.ProductController",
+    "Method": "GetProductById",
+    "RelativePath": "api/Product/get/{productGuid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productGuid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ProductController",
     "Method": "GetProducts",
     "RelativePath": "api/Product/getall",
     "HttpMethod": "GET",

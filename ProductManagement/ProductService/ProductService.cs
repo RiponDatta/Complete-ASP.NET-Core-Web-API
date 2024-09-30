@@ -102,13 +102,14 @@ namespace Services
             }
         }
 
-        public Product GetProductById(Guid productId)
+        public ProductDto GetProductById(Guid productId)
         {
             var product = _repositoryManager.Product.GetProductById(productId);
 
-            return product;
-        }
+            var productDto = _mapper.Map<ProductDto>(product);
 
+            return productDto;
+        }
         
     }
 }

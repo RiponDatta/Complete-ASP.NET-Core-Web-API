@@ -25,5 +25,13 @@ namespace API.Controllers
                 throw new Exception("Internal Server Error.");
             }
         }
+
+        [HttpGet("get/{productGuid:Guid}")]
+        public IActionResult GetProductById(Guid productGuid)
+        {
+            var product = _serivce.GetProductById(productGuid);
+
+            return Ok(product);
+        }
     }
 }
