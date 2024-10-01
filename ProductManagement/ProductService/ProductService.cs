@@ -19,15 +19,19 @@ namespace Services
             _mapper = mapper;
         }
 
-        public Product AddProduct(Product product)
+        public ProductDto AddProduct(ProductDto productDto)
         {
             try
             {
+                var product = _mapper.Map<Product>(productDto);
+
                 var newProduct = _repositoryManager.Product.AddProduct(product);
 
                 _repositoryManager.Save();
 
-                return newProduct;
+                var newProductDto = _mapper.Map<ProductDto>(newProduct);
+
+                return newProductDto;
             }
             catch (Exception ex)
             {

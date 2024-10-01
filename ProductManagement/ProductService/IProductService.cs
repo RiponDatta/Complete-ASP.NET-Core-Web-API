@@ -9,7 +9,7 @@ namespace Services
 
         ProductDto GetProductById(Guid productId);
 
-        Product AddProduct(Product product);
+        ProductDto AddProduct(ProductDto product);
 
         ProductDto UpdateProduct(ProductDto product);
 
