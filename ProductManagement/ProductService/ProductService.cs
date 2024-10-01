@@ -68,14 +68,14 @@ namespace Services
             }
         }
 
-        public void DeleteProduct(Guid productId)
+        public void DeleteProduct(Guid productGuid)
         {
             try
             {
-                var productToDelete = _repositoryManager.Product.GetProductById(productId);
+                var productToDelete = _repositoryManager.Product.GetProductById(productGuid);
 
-                if(productToDelete == null )
-                    throw new Exception($"Product Guid: {productId} is not existed.");
+                if(productToDelete is null )
+                    throw new Exception($"Product Guid: {productGuid} is not existed.");
 
                 _repositoryManager.Product.DeleteProduct(productToDelete);
                 _repositoryManager.Save();

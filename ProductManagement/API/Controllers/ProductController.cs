@@ -52,5 +52,13 @@ namespace API.Controllers
 
             return Ok(newProduct);
         }
+
+        [HttpDelete("{productGuid:Guid}")]
+        public IActionResult DeleteProduct(Guid productGuid)
+        {
+            _serivce.DeleteProduct(productGuid);
+
+            return Ok();
+        }
     }
 }
