@@ -2,6 +2,7 @@
 using LoggerService;
 using Repository;
 using Repository.Models;
+using Shared.Exceptions;
 using Shared.Products;
 
 namespace Services
@@ -46,7 +47,7 @@ namespace Services
                 var existingProduct = _repositoryManager.Product.GetProductById(product.ProductGuid);
 
                 if (existingProduct is null)
-                    throw new Exception($"Product Guid: {product.ProductGuid} is not existed.");
+                    throw new BadRequestException($"Product Guid: {product.ProductGuid} is not existed.");
 
                 existingProduct.Title = product.Title;
                 existingProduct.Description = product.Description;
@@ -75,7 +76,7 @@ namespace Services
                 var productToDelete = _repositoryManager.Product.GetProductById(productGuid);
 
                 if(productToDelete is null )
-                    throw new Exception($"Product Guid: {productGuid} is not existed.");
+                    throw new BadRequestException($"Product Guid: {productGuid} is not existed.");
 
                 _repositoryManager.Product.DeleteProduct(productToDelete);
                 _repositoryManager.Save();
@@ -91,6 +92,8 @@ namespace Services
         {
             try
             {
+                throw new NotFoundException("Error");
+
                 var products = _repositoryManager.Product.GetAllProducts();
 
                 if (products == null)
@@ -107,9 +110,12 @@ namespace Services
             }
         }
 
-        public ProductDto GetProductById(Guid productId)
+        public ProductDto GetProductById(Guid productGuid)
         {
-            var product = _repositoryManager.Product.GetProductById(productId);
+            var product = _repositoryManager.Product.GetProductById(productGuid);
+
+            if (product is null)
+                throw new NotFoundException($"Product Guid: {productGuid} doesn't exist.");
 
             var productDto = _mapper.Map<ProductDto>(product);
 

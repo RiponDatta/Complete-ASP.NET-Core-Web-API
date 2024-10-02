@@ -1,4 +1,5 @@
 using API.Extensions;
+using LoggerService;
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,9 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+var logger = app.Services.GetRequiredService<ILoggerManager>();
+app.ConfigureExceptionHandler(logger);
 
 app.UseCors();
 

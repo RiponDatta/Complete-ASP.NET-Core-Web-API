@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Services;
+using Shared.Exceptions;
 using Shared.Products;
 
 namespace API.Controllers
@@ -20,6 +21,10 @@ namespace API.Controllers
                 var products = _serivce.GetAllProducts();
 
                 return Ok(products);
+            }
+            catch (NotFoundException ex)
+            {
+                throw ex;
             }
             catch (Exception ex)
             {
