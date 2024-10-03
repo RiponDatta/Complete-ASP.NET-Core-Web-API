@@ -1,15 +1,11 @@
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\bin\Debug\net8.0\Shared.deps.json
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\bin\Debug\net8.0\Shared.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\bin\Debug\net8.0\Shared.pdb
-D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\bin\Debug\net8.0\Repository.dll
-D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\bin\Debug\net8.0\Repository.pdb
-D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.csproj.AssemblyReference.cache
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.AssemblyInfo.cs
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.csproj.CoreCompileInputs.cache
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.sourcelink.json
-D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.csproj.Up2Date
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\refint\Shared.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Shared\obj\Debug\net8.0\Shared.pdb

@@ -1,4 +1,5 @@
 ﻿using Repository.Models;
+using Shared.Paging;
 
 namespace Repository.Products
 {
@@ -7,7 +8,7 @@ namespace Repository.Products
         Product AddProduct(Product product);
         void UpdateProduct(Product product);
         void DeleteProduct(Product product);
-        IEnumerable<Product> GetAllProducts();
-        Product GetProductById(Guid productGuid);
+        Task<IEnumerable<Product>> GetAllProductsAsync(RequestParameter requestParameter);
+        Task<Product> GetProductByIdAsync(Guid productGuid);
     }
 }

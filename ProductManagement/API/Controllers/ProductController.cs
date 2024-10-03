@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Services;
 using Shared.Exceptions;
+using Shared.Paging;
 using Shared.Products;
 
 namespace API.Controllers
@@ -14,11 +15,11 @@ namespace API.Controllers
         public ProductController(IProductService service) => _serivce = service;
 
         [HttpGet]
-        public IActionResult GetProducts()
+        public async Task<IActionResult> GetProductsAsync([FromQuery] RequestParameter requestParameter)
         {
             try
             {
-                var products = _serivce.GetAllProducts();
+                var products = await _serivce.GetAllProductsAsync(requestParameter);
 
                 return Ok(products);
             }
@@ -33,35 +34,35 @@ namespace API.Controllers
         }
 
         [HttpGet("{productGuid:Guid}")]
-        public IActionResult GetProductById(Guid productGuid)
+        public async Task<IActionResult> GetProductByIdAsync(Guid productGuid)
         {
-            var product = _serivce.GetProductById(productGuid);
+            var product = await _serivce.GetProductByIdAsync(productGuid);
 
             return Ok(product);
         }
 
         [HttpPut]
-        public IActionResult UpdateProduct(ProductDto product)
+        public async Task<IActionResult> UpdateProductAsync(ProductDto product)
         {
-            var newProduct = _serivce.UpdateProduct(product);
+            var newProduct = await _serivce.UpdateProductAsync(product);
 
             return Ok(newProduct);
         }
 
         [HttpPost]
-        public IActionResult AddProduct(ProductDto product)
+        public async Task<IActionResult> AddProductAsync(ProductDto product)
         {
             product.ProductGuid = Guid.NewGuid();
 
-            var newProduct = _serivce.AddProduct(product);
+            var newProduct = await _serivce.AddProductAsync(product);
 
             return Ok(newProduct);
         }
 
         [HttpDelete("{productGuid:Guid}")]
-        public IActionResult DeleteProduct(Guid productGuid)
+        public async Task<IActionResult> DeleteProductAsync(Guid productGuid)
         {
-            _serivce.DeleteProduct(productGuid);
+            await _serivce.DeleteProductAsync(productGuid);
 
             return Ok();
         }

@@ -1,6 +1,4 @@
-﻿using Repository.Models;
-
-namespace Shared.Products
+﻿namespace Shared.Products
 {
     public class ProductDto
     {

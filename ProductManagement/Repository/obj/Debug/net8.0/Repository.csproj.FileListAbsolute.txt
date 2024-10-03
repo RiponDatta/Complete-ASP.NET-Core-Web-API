@@ -11,3 +11,6 @@ D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Repository\obj\Debug\
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Repository\obj\Debug\net8.0\refint\Repository.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Repository\obj\Debug\net8.0\Repository.pdb
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Repository\obj\Debug\net8.0\ref\Repository.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Repository\bin\Debug\net8.0\Shared.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Repository\bin\Debug\net8.0\Shared.pdb
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\Repository\obj\Debug\net8.0\Repository.csproj.Up2Date
