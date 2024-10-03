@@ -1,4 +1,5 @@
-﻿using Repository.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Repository.Models;
 
 namespace Repository.Products
 {
@@ -14,8 +15,11 @@ namespace Repository.Products
 
         public void UpdateProduct(Product product) => Update(product);
 
-        public IEnumerable<Product> GetAllProducts() => FindAll().OrderBy(x => x.Title).ToList();
+        public async Task<IEnumerable<Product>> GetAllProductsAsync() => 
+            await FindAll()
+            .OrderBy(x => x.Title)
+            .ToListAsync();
 
-        public Product GetProductById(Guid productGuid) => FindByCondition(x => x.ProductGuid == productGuid).FirstOrDefault();
+        public async Task<Product> GetProductByIdAsync(Guid productGuid) => await FindByCondition(x => x.ProductGuid == productGuid).FirstOrDefaultAsync();
     }
 }

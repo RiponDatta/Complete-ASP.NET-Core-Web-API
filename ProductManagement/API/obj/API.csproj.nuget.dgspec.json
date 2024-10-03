@@ -280,7 +280,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\Shared\\Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -350,11 +354,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\Repository\\Repository.csproj": {
-                "projectPath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\Repository\\Repository.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

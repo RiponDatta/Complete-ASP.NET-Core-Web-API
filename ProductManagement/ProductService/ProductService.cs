@@ -20,7 +20,7 @@ namespace Services
             _mapper = mapper;
         }
 
-        public ProductDto AddProduct(ProductDto productDto)
+        public async Task<ProductDto> AddProductAsync(ProductDto productDto)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace Services
 
                 var newProduct = _repositoryManager.Product.AddProduct(product);
 
-                _repositoryManager.Save();
+                await _repositoryManager.SaveAsync();
 
                 var newProductDto = _mapper.Map<ProductDto>(newProduct);
 
@@ -36,15 +36,15 @@ namespace Services
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(AddProduct)}: {ex}");
+                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(AddProductAsync)}: {ex}");
                 throw;
             }
         }
-        public ProductDto UpdateProduct(ProductDto product)
+        public async Task<ProductDto> UpdateProductAsync(ProductDto product)
         {
             try
             {
-                var existingProduct = _repositoryManager.Product.GetProductById(product.ProductGuid);
+                var existingProduct = await _repositoryManager.Product.GetProductByIdAsync(product.ProductGuid);
 
                 if (existingProduct is null)
                     throw new BadRequestException($"Product Guid: {product.ProductGuid} is not existed.");
@@ -56,45 +56,43 @@ namespace Services
                 existingProduct.ProductTypeId = product.ProductTypeId;
 
                 _repositoryManager.Product.UpdateProduct(existingProduct);
-                _repositoryManager.Save();
+                await _repositoryManager.SaveAsync();
 
-                product = GetProductById(product.ProductGuid);
+                product = await GetProductByIdAsync(product.ProductGuid);
 
                 return product;
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(UpdateProduct)}: {ex}");
+                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(UpdateProductAsync)}: {ex}");
                 throw;
             }
         }
 
-        public void DeleteProduct(Guid productGuid)
+        public async Task DeleteProductAsync(Guid productGuid)
         {
             try
             {
-                var productToDelete = _repositoryManager.Product.GetProductById(productGuid);
+                var productToDelete = await _repositoryManager.Product.GetProductByIdAsync(productGuid);
 
                 if(productToDelete is null )
                     throw new BadRequestException($"Product Guid: {productGuid} is not existed.");
 
                 _repositoryManager.Product.DeleteProduct(productToDelete);
-                _repositoryManager.Save();
+                await _repositoryManager.SaveAsync();
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(DeleteProduct)}: {ex}");
+                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(DeleteProductAsync)}: {ex}");
                 throw;
             }
         }
 
-        public IEnumerable<ProductDto> GetAllProducts()
+        public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
         {
             try
             {
-                throw new NotFoundException("Error");
-
-                var products = _repositoryManager.Product.GetAllProducts();
+                var products = await _repositoryManager.Product.GetAllProductsAsync();
 
                 if (products == null)
                     return null;
@@ -105,14 +103,14 @@ namespace Services
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(GetAllProducts)}: {ex}");
+                _logger.LogError($"Error in {nameof(ProductService)}.{nameof(GetAllProductsAsync)}: {ex}");
                 throw;
             }
         }
 
-        public ProductDto GetProductById(Guid productGuid)
+        public async Task<ProductDto> GetProductByIdAsync(Guid productGuid)
         {
-            var product = _repositoryManager.Product.GetProductById(productGuid);
+            var product = await _repositoryManager.Product.GetProductByIdAsync(productGuid);
 
             if (product is null)
                 throw new NotFoundException($"Product Guid: {productGuid} doesn't exist.");

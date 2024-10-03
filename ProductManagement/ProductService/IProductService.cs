@@ -1,18 +1,17 @@
-﻿using Repository.Models;
-using Shared.Products;
+﻿using Shared.Products;
 
 namespace Services
 {
     public interface IProductService
     {
-        IEnumerable<ProductDto> GetAllProducts();
+        Task<IEnumerable<ProductDto>> GetAllProductsAsync();
 
-        ProductDto GetProductById(Guid productId);
+        Task<ProductDto> GetProductByIdAsync(Guid productId);
 
-        ProductDto AddProduct(ProductDto product);
+        Task<ProductDto> AddProductAsync(ProductDto product);
 
-        ProductDto UpdateProduct(ProductDto product);
+        Task<ProductDto> UpdateProductAsync(ProductDto product);
 
-        void DeleteProduct(Guid productId);
+        Task DeleteProductAsync(Guid productGuid);
     }
 }

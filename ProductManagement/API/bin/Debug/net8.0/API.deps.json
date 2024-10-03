@@ -920,7 +920,8 @@
       },
       "Repository/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.8"
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Shared": "1.0.0"
         },
         "runtime": {
           "Repository.dll": {
@@ -930,9 +931,6 @@
         }
       },
       "Shared/1.0.0": {
-        "dependencies": {
-          "Repository": "1.0.0"
-        },
         "runtime": {
           "Shared.dll": {
             "assemblyVersion": "1.0.0",
