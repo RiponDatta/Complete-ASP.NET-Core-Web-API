@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tJjgowMAEx0=",
+  "dgSpecHash": "9WquJxb2Bvc=",
   "success": true,
   "projectFilePath": "D:\\youtube\\Complete-ASP.NET-Core-Web-API\\ProductManagement\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\srpnc\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
+    "C:\\Users\\srpnc\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
+    "C:\\Users\\srpnc\\.nuget\\packages\\asp.versioning.mvc\\8.1.0\\asp.versioning.mvc.8.1.0.nupkg.sha512",
+    "C:\\Users\\srpnc\\.nuget\\packages\\asp.versioning.mvc.apiexplorer\\8.1.0\\asp.versioning.mvc.apiexplorer.8.1.0.nupkg.sha512",
     "C:\\Users\\srpnc\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\srpnc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\srpnc\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

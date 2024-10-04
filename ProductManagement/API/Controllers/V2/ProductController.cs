@@ -5,10 +5,10 @@ using Shared.Exceptions;
 using Shared.Paging;
 using Shared.Products;
 
-namespace API.Controllers
+namespace API.Controllers.V2
 {
-    [ApiVersion("1.0", Deprecated = true)]
-    [Route("api/[controller]")]
+    [ApiVersion("2.0")]
+    [Route("api/v{v:apiversion}/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -38,7 +38,9 @@ namespace API.Controllers
         [HttpGet("{productGuid:Guid}")]
         public async Task<IActionResult> GetProductByIdAsync(Guid productGuid)
         {
-            var product = await _serivce.GetProductByIdAsync(productGuid);
+            int versionNumber = 2;
+
+            var product = await _serivce.GetProductByIdAsync(productGuid, versionNumber);
 
             return Ok(product);
         }

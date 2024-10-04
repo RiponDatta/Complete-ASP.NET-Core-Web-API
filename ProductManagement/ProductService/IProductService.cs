@@ -8,7 +8,7 @@ namespace Services
     {
         Task<IEnumerable<ProductDto>> GetAllProductsAsync(RequestParameter requestParameter);
 
-        Task<ProductDto> GetProductByIdAsync(Guid productId);
+        Task<ProductDto> GetProductByIdAsync(Guid productId, int? versionNumber = null);
 
         Task<ProductDto> AddProductAsync(ProductDto product);
 
