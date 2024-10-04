@@ -143,3 +143,8 @@ D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Shared.dll
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Shared.pdb
 D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\AutoMapper.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Asp.Versioning.Http.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll
+D:\youtube\Complete-ASP.NET-Core-Web-API\ProductManagement\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs

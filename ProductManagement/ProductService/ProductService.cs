@@ -109,12 +109,15 @@ namespace Services
             }
         }
 
-        public async Task<ProductDto> GetProductByIdAsync(Guid productGuid)
+        public async Task<ProductDto> GetProductByIdAsync(Guid productGuid, int? versionNumber = null)
         {
             var product = await _repositoryManager.Product.GetProductByIdAsync(productGuid);
 
-            if (product is null)
-                throw new NotFoundException($"Product Guid: {productGuid} doesn't exist.");
+            if (versionNumber != null && versionNumber > 1)
+            {
+                if (product is null)
+                    throw new NotFoundException($"Product Guid: {productGuid} doesn't exist.");
+            }
 
             var productDto = _mapper.Map<ProductDto>(product);
 

@@ -17,6 +17,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddControllers();
 
+builder.Services.ConfigureVersioning();
+
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILoggerManager>();
