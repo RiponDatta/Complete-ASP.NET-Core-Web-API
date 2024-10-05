@@ -9,6 +9,7 @@ namespace API.Controllers.V2
 {
     [ApiVersion("2.0")]
     [Route("api/v{v:apiversion}/[controller]")]
+    [ResponseCache(CacheProfileName = "10SecondsDuration")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -17,6 +18,7 @@ namespace API.Controllers.V2
         public ProductController(IProductService service) => _serivce = service;
 
         [HttpGet]
+        //[ResponseCache(CacheProfileName = "10SecondsDuration")]
         public async Task<IActionResult> GetProductsAsync([FromQuery] RequestParameter requestParameter)
         {
             try
@@ -36,6 +38,7 @@ namespace API.Controllers.V2
         }
 
         [HttpGet("{productGuid:Guid}")]
+        [ResponseCache(CacheProfileName = "15SecondsDuration")]
         public async Task<IActionResult> GetProductByIdAsync(Guid productGuid)
         {
             int versionNumber = 2;
