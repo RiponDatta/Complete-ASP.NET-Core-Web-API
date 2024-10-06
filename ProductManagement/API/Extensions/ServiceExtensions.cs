@@ -1,8 +1,10 @@
 ﻿using Asp.Versioning;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Repository;
 using Services;
+using System.Reflection;
 
 namespace API.Extensions
 {
@@ -52,6 +54,28 @@ namespace API.Extensions
                 options.GroupNameFormat = "'v'VVV";
 
                 options.SubstituteApiVersionInUrl = true;
+            });
+
+        public static void ConfigureSwagger(this IServiceCollection services) =>
+            services.AddSwaggerGen(sg => 
+            {
+                sg.SwaggerDoc("v1", new OpenApiInfo { 
+                    Title = "Product Management API", 
+                    Version = "v1", 
+                    Description = "This is a Product Management API." 
+                });
+
+                sg.SwaggerDoc("v2", new OpenApiInfo
+                {
+                    Title = "Product Management API",
+                    Version = "v2",
+                    Description = "This is a Product Management API."
+                });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+
+                sg.IncludeXmlComments(xmlPath);
             });
     }
 }

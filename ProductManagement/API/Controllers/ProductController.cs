@@ -16,6 +16,12 @@ namespace API.Controllers
 
         public ProductController(IProductService service) => _serivce = service;
 
+        /// <summary>
+        /// Get all products.
+        /// </summary>
+        /// <param name="requestParameter"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         [HttpGet]
         public async Task<IActionResult> GetProductsAsync([FromQuery] RequestParameter requestParameter)
         {
@@ -35,6 +41,11 @@ namespace API.Controllers
             }
         }
 
+        /// <summary>
+        /// Get Product by ProductGuid.
+        /// </summary>
+        /// <param name="productGuid"></param>
+        /// <returns></returns>
         [HttpGet("{productGuid:Guid}")]
         public async Task<IActionResult> GetProductByIdAsync(Guid productGuid)
         {
