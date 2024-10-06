@@ -14,6 +14,7 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServices();
 builder.Services.ConfigureDbContext(builder.Configuration);
 builder.Services.AddResponseCaching();
+builder.Services.ConfigureSwagger();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -40,6 +41,12 @@ var logger = app.Services.GetRequiredService<ILoggerManager>();
 app.ConfigureExceptionHandler(logger);
 
 app.UseCors();
+
+app.UseSwagger();
+app.UseSwaggerUI(s => {
+    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Product Management API V1");
+    s.SwaggerEndpoint("/swagger/v2/swagger.json", "Product Management API V2");
+});
 
 app.UseResponseCaching();
 
