@@ -73,5 +73,14 @@ namespace API.Controllers.V2
 
             return Ok();
         }
+
+        [HttpGet]
+        [Route("getproducttypes")]
+        public async Task<IActionResult> GetProductTypes()
+        {
+            var productTypes = await _serivce.GetProductTypesAsync();
+
+            return Ok(productTypes);
+        }
     }
 }

@@ -43,5 +43,17 @@
         <member name="M:API.Migrations.AddedProductTypeConfiguration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:API.Migrations.AddedProductTypeGuid">
+            <inheritdoc />
+        </member>
+        <member name="M:API.Migrations.AddedProductTypeGuid.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:API.Migrations.AddedProductTypeGuid.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:API.Migrations.AddedProductTypeGuid.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

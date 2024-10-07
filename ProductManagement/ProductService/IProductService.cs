@@ -15,5 +15,6 @@ namespace Services
         Task<ProductDto> UpdateProductAsync(ProductDto product);
 
         Task DeleteProductAsync(Guid productGuid);
+        Task<IEnumerable<ProductTypeDto>> GetProductTypesAsync();
     }
 }

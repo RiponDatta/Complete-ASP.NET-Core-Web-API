@@ -123,6 +123,14 @@ namespace Services
 
             return productDto;
         }
-        
+
+        public async Task<IEnumerable<ProductTypeDto>> GetProductTypesAsync()
+        {
+            var productTypes = await _repositoryManager.ProductType.GetProductTypesAsync();
+
+            var productTypesDto = _mapper.Map<IEnumerable<ProductTypeDto>>(productTypes);
+
+            return productTypesDto;
+        }
     }
 }

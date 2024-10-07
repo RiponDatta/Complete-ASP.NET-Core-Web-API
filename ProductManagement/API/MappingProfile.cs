@@ -10,6 +10,8 @@ namespace API
         {
             CreateMap<Product, ProductDto>();
             CreateMap<ProductDto, Product>();
+
+            CreateMap<ProductType, ProductTypeDto>();
         }
     }
 }

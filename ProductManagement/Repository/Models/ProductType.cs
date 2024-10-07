@@ -8,6 +8,9 @@ namespace Repository.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        public Guid ProductTypeGuid { get; set; }
+
         [StringLength(30)]
         [Column(TypeName = "VARCHAR")]
         public string Name { get; set; }

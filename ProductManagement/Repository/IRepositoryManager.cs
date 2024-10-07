@@ -10,6 +10,7 @@ namespace Repository
     public interface IRepositoryManager
     {
         IProductRepository Product { get; }
+        IProductTypeRepository ProductType { get; }
 
         Task SaveAsync();
     }
