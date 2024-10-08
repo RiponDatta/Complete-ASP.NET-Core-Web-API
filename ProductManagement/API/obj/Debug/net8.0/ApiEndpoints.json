@@ -296,12 +296,74 @@
   },
   {
     "ContainingType": "API.Controllers.V2.ProductController",
+    "Method": "AddProductTypeAsync",
+    "RelativePath": "api/v{v}/Product/addproducttype",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productType",
+        "Type": "Shared.Products.ProductTypeDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "v",
+        "Type": "",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.V2.ProductController",
     "Method": "GetProductTypes",
     "RelativePath": "api/v{v}/Product/getproducttypes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "v",
+        "Type": "",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.V2.ProductController",
+    "Method": "UpdateProductTypeAsync",
+    "RelativePath": "api/v{v}/Product/updateproducttype",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productType",
+        "Type": "Shared.Products.ProductTypeDto",
+        "IsRequired": true
+      },
       {
         "Name": "v",
         "Type": "",

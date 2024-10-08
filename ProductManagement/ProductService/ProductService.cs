@@ -132,5 +132,36 @@ namespace Services
 
             return productTypesDto;
         }
+
+        public async Task<ProductTypeDto> AddProductTypeAsync(ProductTypeDto productTypeDto)
+        {
+            var productType = _mapper.Map<ProductType>(productTypeDto);
+
+            productType = _repositoryManager.ProductType.AddProductType(productType);
+
+            await _repositoryManager.SaveAsync();
+
+            productTypeDto = _mapper.Map<ProductTypeDto>(productType);
+
+            return productTypeDto;
+        }
+
+        public async Task<ProductTypeDto> UpdateProductTypeAsync(ProductTypeDto productTypeDto)
+        {
+            var existingProductType = await _repositoryManager.ProductType.GetProductTypeByIdAsync(productTypeDto.ProductTypeGuid);
+
+            if (existingProductType is null)
+                throw new BadRequestException($"Product Type Guid: {productTypeDto.ProductTypeGuid} is not existed.");
+
+            existingProductType.Name = productTypeDto.Name;
+
+            _repositoryManager.ProductType.UpdateProductType(existingProductType);
+
+            await _repositoryManager.SaveAsync();
+
+            productTypeDto = _mapper.Map<ProductTypeDto>(existingProductType);
+
+            return productTypeDto;
+        }
     }
 }

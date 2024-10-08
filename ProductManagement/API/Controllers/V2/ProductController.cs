@@ -82,5 +82,25 @@ namespace API.Controllers.V2
 
             return Ok(productTypes);
         }
+
+        [HttpPost]
+        [Route("addproducttype")]
+        public async Task<IActionResult> AddProductTypeAsync(ProductTypeDto productType)
+        {
+            productType.ProductTypeGuid = Guid.NewGuid();
+
+            var newProductType = await _serivce.AddProductTypeAsync(productType);
+
+            return Ok(newProductType);
+        }
+
+        [HttpPut]
+        [Route("updateproducttype")]
+        public async Task<IActionResult> UpdateProductTypeAsync(ProductTypeDto productType)
+        {
+            var newProductType = await _serivce.UpdateProductTypeAsync(productType);
+
+            return Ok(newProductType);
+        }
     }
 }

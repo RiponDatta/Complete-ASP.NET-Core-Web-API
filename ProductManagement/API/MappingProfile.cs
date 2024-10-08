@@ -12,6 +12,7 @@ namespace API
             CreateMap<ProductDto, Product>();
 
             CreateMap<ProductType, ProductTypeDto>();
+            CreateMap<ProductTypeDto, ProductType>();
         }
     }
 }
