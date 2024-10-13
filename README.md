@@ -39,3 +39,17 @@ Part 13 - HttpPost, Add Product: [https://youtu.be/BlavB2Z4MIw](https://youtu.be
 Part 14 - HttpDelete, Delete Product: [https://youtu.be/di4ATiS9Flg](https://youtu.be/di4ATiS9Flg)
 
 Part 15 - Advanced C# Exception Handling, Global Exception Handling: [https://youtu.be/JW0kc74AFcU](https://youtu.be/JW0kc74AFcU)
+
+Part 16 - Asynchronous Programming, Async, Await: [https://youtu.be/uybK95auTaQ](https://youtu.be/uybK95auTaQ)
+
+Part 17 - Paging, PageSize, PageNumber, Skip, Take: [https://youtu.be/pfDaxXFDr4k](https://youtu.be/pfDaxXFDr4k)
+
+Part 18 - API Versioning from Beginner to Advanced: [https://youtu.be/KaTM23DszzU](https://youtu.be/KaTM23DszzU)
+
+Part 19 - Caching, Response Caching, Web Caching, Http Caching: [https://youtu.be/XVbm-l-H2KQ](https://youtu.be/XVbm-l-H2KQ)
+
+Part 20 - Swagger UI, Openapi Swagger, Swagger REST API: [https://youtu.be/tO3OWn73xrE](https://youtu.be/tO3OWn73xrE)
+
+Homework #1 - [https://youtu.be/-lfKNrXczFc](https://youtu.be/-lfKNrXczFc)
+
+Homework #2 - [https://youtu.be/L-n8WGGFtlI](https://youtu.be/L-n8WGGFtlI)
